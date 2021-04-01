@@ -1,0 +1,15 @@
+.navbar__main {
+    position: fixed;
+    min-width: 12rem;
+    min-height: 100vh !important;
+    z-index: 100;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.navbar__brand {
+    cursor: pointer;
+}
+
+.navbar__items {
+    cursor: pointer;
+}

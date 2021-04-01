@@ -1,0 +1,7 @@
+.experience {
+    min-height: 100vh;
+}
+
+.experience__card {
+    width: 30rem;
+}
