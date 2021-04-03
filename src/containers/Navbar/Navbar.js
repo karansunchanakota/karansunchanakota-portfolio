@@ -30,7 +30,8 @@ const Navbar = () => {
                         <a dest="contact" className="navbar__items">Contact</a>
                     </div>
                     <div>
-                        <a dest="home" className="navbar__items" >Resume</a>
+                        {/* <a dest="home" className="navbar__items" >Resume</a> */}
+                        <a href="https://drive.google.com/file/d/1K9c1TVhvRKtegljaxZAmLtemEh2y5zUC/view?usp=sharing" target="_blank">Resume</a>
                     </div>
                 </div>
             </nav>
