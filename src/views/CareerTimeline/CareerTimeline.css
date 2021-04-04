@@ -1,0 +1,25 @@
+.timeline {
+    min-height: 100vh;
+}
+
+.timeline__opposite__content {
+    margin-top: 0.75rem
+}
+
+.timeline__content {
+    position: relative;
+    bottom: 1rem;
+}
+
+.timeline__paper {
+    padding: 1rem;
+    width: fit-content;
+    min-height: fit-content;
+}
+
+.timeline__paper__reverse {
+    padding: 1rem;
+    width: fit-content;
+    min-height: fit-content;
+    float: right;
+}

@@ -5,34 +5,32 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <div className="navbar__main">
-            <div className="navbar__brand" dest="home">
-                <h4>Karan Sunchanakota</h4>
-                <span>Software Developer</span>
-            </div>
-            <nav>
+            <div className="navbar__brand page__link" dest="home">
+                <h3>Karan Sunchanakota</h3>
+                <span>Software Engineer</span>
+            </div>  
+            <nav className="navbar__items">
                 <div>
-                    <div>
-                        <a dest="about" className="navbar__items">About</a>
-                    </div>
-                    <div>
-                        <a dest="experience" className="navbar__items">Experience</a>
-                    </div>
-                    <div>
-                        <a dest="projects" className="navbar__items">Projects</a>
-                    </div>
-                    <div>
-                        <a dest="skills" className="navbar__items">Skills</a>
-                    </div>
-                    <div>
-                        <a dest="timeline" className="navbar__items">Timeline</a>
-                    </div>
-                    <div>
-                        <a dest="contact" className="navbar__items">Contact</a>
-                    </div>
-                    <div>
-                        {/* <a dest="home" className="navbar__items" >Resume</a> */}
-                        <a href="https://drive.google.com/file/d/1K9c1TVhvRKtegljaxZAmLtemEh2y5zUC/view?usp=sharing" target="_blank">Resume</a>
-                    </div>
+                    <a dest="about" className="page__link">About</a>
+                </div>
+                <div>
+                    <a dest="experience" className="page__link">Experience</a>
+                </div>
+                <div>
+                    <a dest="projects" className="page__link">Projects</a>
+                </div>
+                <div>
+                    <a dest="skills" className="page__link">Skills</a>
+                </div>
+                <div>
+                    <a dest="timeline" className="page__link">Timeline</a>
+                </div>
+                <div>
+                    <a dest="contact" className="page__link">Contact</a>
+                </div>
+                <div>
+                    {/* <a dest="home" className="page__link" >Resume</a> */}
+                    <a href="https://drive.google.com/file/d/1K9c1TVhvRKtegljaxZAmLtemEh2y5zUC/view?usp=sharing" target="_blank">Resume</a>
                 </div>
             </nav>
         </div>
