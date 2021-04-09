@@ -3,7 +3,7 @@
     scroll-behavior: smooth;
     /* box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1); */
     background: url(../../images/karan.jpg);
-    background-size: 75%;
+    background-size: 90%;
 }
 
 .main__home {
@@ -25,17 +25,29 @@ a.know__more {
     color: #ffffff;
     opacity: 0.6;
     font-size: 1.2rem;
-    font-weight: 300
+    font-weight: 300;
 }
 
 a.know__more:hover {
+    transition: transform 0.5s;
     cursor: pointer;
     background-color: #000000;
     text-decoration: none;
     color: #ffffff;
     opacity: 0.8;
     font-size: 1.2rem;
-    font-weight: 300
+    font-weight: 300;
+}
+
+a.know__more:hover .rightArrow {
+    transition: transform 0.5s;
+    transform: rotate(90deg);
+}
+
+.rightArrow {
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+    width: 1.5rem;
 }
 
 .main__heading {
@@ -47,7 +59,7 @@ a.know__more:hover {
 .heading__underline {
     width: 5rem;
     text-align: center;
-    background-color: #2a2a2a;
+    background-color: #3d3d3d;
     height: 0.25rem;
     margin-bottom: 1rem;
 }

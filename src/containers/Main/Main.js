@@ -7,6 +7,8 @@ import Experience from '../../views/Experience/Experience'
 import Projects from '../../views/Projects/Projects'
 import Skills from '../../views/Skills/Skills'
 import $ from 'jquery'
+import rightArrow from '../../images/rightArrow.svg'
+import { ArrowForward } from '@material-ui/icons';
 const Main = () => {
     useEffect(() => {
         ($(".page__link")).click(function() {
@@ -22,7 +24,11 @@ const Main = () => {
     return (
         <div className="main">
             <div className="main__home" id="home">
-                <a dest="about" className="page__link know__more">Know more about my work</a>
+                <a dest="about" className="page__link know__more">
+                    Know more about my work
+                    <ArrowForward className="rightArrow" />
+                    {/* <img className="rightArrow" src={ rightArrow } />     */}
+                </a>
             </div>
             <About />
             <Experience />

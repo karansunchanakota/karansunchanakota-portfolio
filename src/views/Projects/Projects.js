@@ -6,7 +6,10 @@ import rocket from '../../images/rocket.svg'
 const Projects = () => {
     return (
         <section className="projects" id="projects">
-            <h2>Projects</h2>
+            <div className="main__heading">
+                <h2>PROJECTS</h2>
+                <div className="projects__underline"></div>
+            </div>
             <Container>
                 <div className="projects__cards">
                     <Card className="projects__card">
