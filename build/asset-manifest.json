@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/karansunchanakota-portfolio/static/css/main.de422ee8.chunk.css",
+    "main.js": "/karansunchanakota-portfolio/static/js/main.4f9e82ce.chunk.js",
+    "main.js.map": "/karansunchanakota-portfolio/static/js/main.4f9e82ce.chunk.js.map",
+    "runtime-main.js": "/karansunchanakota-portfolio/static/js/runtime-main.3f8f3f98.js",
+    "runtime-main.js.map": "/karansunchanakota-portfolio/static/js/runtime-main.3f8f3f98.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/karansunchanakota-portfolio/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.b88da43c.chunk.js": "/karansunchanakota-portfolio/static/js/2.b88da43c.chunk.js",
+    "static/js/2.b88da43c.chunk.js.map": "/karansunchanakota-portfolio/static/js/2.b88da43c.chunk.js.map",
+    "static/js/3.945cce94.chunk.js": "/karansunchanakota-portfolio/static/js/3.945cce94.chunk.js",
+    "static/js/3.945cce94.chunk.js.map": "/karansunchanakota-portfolio/static/js/3.945cce94.chunk.js.map",
+    "index.html": "/karansunchanakota-portfolio/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/karansunchanakota-portfolio/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.de422ee8.chunk.css.map": "/karansunchanakota-portfolio/static/css/main.de422ee8.chunk.css.map",
+    "static/js/2.b88da43c.chunk.js.LICENSE.txt": "/karansunchanakota-portfolio/static/js/2.b88da43c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f8f3f98.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.b88da43c.chunk.js",
+    "static/css/main.de422ee8.chunk.css",
+    "static/js/main.4f9e82ce.chunk.js"
+  ]
+}

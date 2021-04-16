@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Skills.css'
+import SkillChart from './SkillChart'
 import { Card, Container, CardHeader, CardBody } from 'reactstrap'
 import defaultIcon from '../../images/rocket.svg'
 import angularJS from '../../images/skills/angularJS.svg'
@@ -26,134 +27,186 @@ import reactIcon from '../../images/skills/react-2.svg'
 import subversion from '../../images/skills/subversion.svg'
 
 const Skills = () => {
+    var webTechnologies = [
+        ["HTML", html],
+        ["CSS", css],
+        ["Bootstrap", bootstrap],
+        ["Materialize", materialize],
+        ["Javascript", javascript],
+        ["React", reactIcon],
+        ["jQuery", jquery],
+        ["Node", nodejs],
+        ["JSON", json],
+        ["Ruby on Rails", rails],
+        ["Angular", angularJS],
+        ["Flask", flask]
+    ];
+    var databaseManagement = [
+        ["Mysql", mysql],
+        ["MongoDB", mongodb]
+    ]
+    var programmingLanguages = [
+        ["Java", java],
+        ["C", cProgram],
+        ["C++", cpp],
+        ["Python 3", python]
+    ]
+    var otherSkill = [
+        ["Git", git],
+        ["SVN", subversion],
+        ["Logic Pro X", logicPro],
+        ["Final Cut Pro", finalCut]
+    ]
+    
     return (
         <section className="skills" id="skills">
-            <div className="main__heading">
-                <h2>SKILLS</h2>
-                <div className="skills__underline"></div>
+            <div style={{height:"0.75rem"}}>
             </div>
             <Container className="skills__container">
-                <Card className="skills__card">
-                    <CardHeader className="skills__card__header">
-                        Web Technologies
-                    </CardHeader>
-                    <CardBody className="skills__card__body">
-                        <div className="skills_single">
-                            <img className="skills_icons" src={html} />
-                            <span>HTML</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={css} />
-                            <span>CSS</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={bootstrap} />
-                            <span>Bootstrap</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={materialize} />
-                            <span>Materialize</span>
-                        </div>
-                        <div className="skills_single">
-                            <img className="skills_icons" src={javascript} />
-                            <span>Javascript</span>
-                        </div>
-                    </CardBody>
-                    <CardBody className="skills__card__body">
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={reactIcon} />
-                            <span>React</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={jquery} />
-                            <span>jQuery</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={nodejs} />
-                            <span>Node</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={json} />
-                            <span>JSON</span>
-                        </div>
-                        <div className="skills_single">
-                            <img className="skills_icons" src={rails} />
-                            <span>Ruby on Rails</span>
-                        </div>
-                    </CardBody>
-                    <CardBody className="skills__card__body">
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={angularJS} />
-                            <span>Angular</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={flask} />
-                            <span>Flask</span>
-                        </div>
-                    </CardBody>
-                </Card>
-                <Card className="skills__card">
-                    <CardHeader className="skills__card__header">
-                        Database Management
-                    </CardHeader>
-                    <CardBody className="skills__card__body">
-                        <div className="skills_single">
-                            <img className="skills_icons" src={mysql} />
-                            <span>Mysql</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={mongodb} />
-                            <span>MongoDB</span>
-                        </div>
-                    </CardBody>
-                </Card>
-                <Card className="skills__card">
-                    <CardHeader className="skills__card__header">
-                        Programming Languages
-                    </CardHeader>
-                    <CardBody className="skills__card__body">
-                        <div className="skills_single">
-                            <img className="skills_icons" src={java} />
-                            <span>Java</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={cProgram} />
-                            <span>C</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={cpp} />
-                            <span>C++</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={python} />
-                            <span>Python 3</span>
-                        </div>
-                    </CardBody>
-                </Card>
-                <Card className="skills__card">
-                    <CardHeader className="skills__card__header">
-                        Other
-                    </CardHeader>
-                    <CardBody className="skills__card__body">
-                        <div className="skills_single">
-                            <img className="skills_icons" src={git} />
-                            <span>Git</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={subversion} />
-                            <span>SVN</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={logicPro} />
-                            <span>Logic Pro X</span>
-                        </div>
-                        <div className="skills_single d-flex flex-column">
-                            <img className="skills_icons" src={finalCut} />
-                            <span>Final Cut Pro</span>
-                        </div>
-                    </CardBody>
+                <div className="main__heading">
+                    <h2>SKILLS</h2>
+                    <div className="skills__underline"></div>
+                </div>
+                <Card className="all__skills">
+                    <div className="skills__with__graph">
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Web Technologies
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    webTechnologies.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Web Technologies
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                <SkillChart />
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className="skills__with__graph">
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Database Management
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    databaseManagement.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Database Management
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    databaseManagement.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className="skills__with__graph"> 
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Programming Languages
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    programmingLanguages.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Programming Languages
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    programmingLanguages.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className="skills__with__graph">
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Other
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    otherSkill.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                        <Card className="skills__card">
+                            <CardHeader className="skills__card__header">
+                                Other
+                            </CardHeader>
+                            <CardBody className="skills__card__body">
+                                {
+                                    otherSkill.map(element => (
+                                        <div className="skills_single">
+                                            <Card className="skills_icons_card">
+                                                <img className="skills_icons" src={element[1]} />
+                                            </Card>
+                                            <span>{element[0]}</span>
+                                        </div>
+                                    ))
+                                }
+                            </CardBody>
+                        </Card>
+                    </div>
                 </Card>
             </Container>
+            <div style={{height:"0.75rem"}}>
+            </div>
         </section>
     )
 }
