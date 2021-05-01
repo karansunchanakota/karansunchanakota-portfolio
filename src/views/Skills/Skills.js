@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import './Skills.css'
 import SkillChart from './SkillChart'
-import { Card, Container, CardHeader, CardBody } from 'reactstrap'
+// import { Card, CardHeader, CardBody } from '@material-ui/core'
+import { Card, CardHeader, CardBody } from 'reactstrap'
 import defaultIcon from '../../images/rocket.svg'
 import angularJS from '../../images/skills/angularJS.svg'
 import bootstrap from '../../images/skills/bootstrap-4.svg'
@@ -28,28 +29,28 @@ import subversion from '../../images/skills/subversion.svg'
 
 const Skills = () => {
     var webTechnologies = [
-        ["HTML", html],
-        ["CSS", css],
-        ["Bootstrap", bootstrap],
-        ["Materialize", materialize],
-        ["Javascript", javascript],
-        ["React", reactIcon],
-        ["jQuery", jquery],
-        ["Node", nodejs],
-        ["JSON", json],
-        ["Ruby on Rails", rails],
-        ["Angular", angularJS],
-        ["Flask", flask]
+        ["HTML", html, 90],
+        ["CSS", css, 90],
+        ["Bootstrap", bootstrap, 85],
+        ["Materialize", materialize, 80],
+        ["Javascript", javascript, 80],
+        ["React", reactIcon, 80],
+        ["jQuery", jquery, 80],
+        ["JSON", json, 75],
+        ["Node", nodejs, 70],
+        ["Ruby on Rails", rails, 50],
+        ["Flask", flask, 45],
+        ["Angular", angularJS, 40]
     ];
     var databaseManagement = [
-        ["Mysql", mysql],
-        ["MongoDB", mongodb]
+        ["Mysql", mysql, 60],
+        ["MongoDB", mongodb, 50]
     ]
     var programmingLanguages = [
-        ["Java", java],
-        ["C", cProgram],
-        ["C++", cpp],
-        ["Python 3", python]
+        ["Java", java, 70],
+        ["Python 3", python, 65],
+        ["C", cProgram,60],
+        ["C++", cpp, 30]
     ]
     var otherSkill = [
         ["Git", git],
@@ -62,7 +63,7 @@ const Skills = () => {
         <section className="skills" id="skills">
             <div style={{height:"0.75rem"}}>
             </div>
-            <Container className="skills__container">
+            <div className="skills__container">
                 <div className="main__heading">
                     <h2>SKILLS</h2>
                     <div className="skills__underline"></div>
@@ -87,11 +88,8 @@ const Skills = () => {
                             </CardBody>
                         </Card>
                         <Card className="skills__card">
-                            <CardHeader className="skills__card__header">
-                                Web Technologies
-                            </CardHeader>
-                            <CardBody className="skills__card__body">
-                                <SkillChart />
+                            <CardBody className="skills__card__graph__body">
+                                <SkillChart yAxes={webTechnologies} height="300px" width="480px"/>
                             </CardBody>
                         </Card>
                     </div>
@@ -114,7 +112,10 @@ const Skills = () => {
                             </CardBody>
                         </Card>
                         <Card className="skills__card">
-                            <CardHeader className="skills__card__header">
+                            <CardBody className="skills__card__graph__body">
+                                <SkillChart yAxes={databaseManagement} height="100px" width="480px"/>
+                            </CardBody>
+                            {/* <CardHeader className="skills__card__header">
                                 Database Management
                             </CardHeader>
                             <CardBody className="skills__card__body">
@@ -128,7 +129,7 @@ const Skills = () => {
                                         </div>
                                     ))
                                 }
-                            </CardBody>
+                            </CardBody> */}
                         </Card>
                     </div>
                     <div className="skills__with__graph"> 
@@ -150,7 +151,10 @@ const Skills = () => {
                             </CardBody>
                         </Card>
                         <Card className="skills__card">
-                            <CardHeader className="skills__card__header">
+                            <CardBody className="skills__card__graph__body">
+                                <SkillChart yAxes={programmingLanguages} height="135px" width="480px"/>
+                            </CardBody>
+                            {/* <CardHeader className="skills__card__header">
                                 Programming Languages
                             </CardHeader>
                             <CardBody className="skills__card__body">
@@ -164,7 +168,7 @@ const Skills = () => {
                                         </div>
                                     ))
                                 }
-                            </CardBody>
+                            </CardBody> */}
                         </Card>
                     </div>
                     <div className="skills__with__graph">
@@ -186,7 +190,7 @@ const Skills = () => {
                             </CardBody>
                         </Card>
                         <Card className="skills__card">
-                            <CardHeader className="skills__card__header">
+                            {/* <CardHeader className="skills__card__header">
                                 Other
                             </CardHeader>
                             <CardBody className="skills__card__body">
@@ -200,11 +204,11 @@ const Skills = () => {
                                         </div>
                                     ))
                                 }
-                            </CardBody>
+                            </CardBody> */}
                         </Card>
                     </div>
                 </Card>
-            </Container>
+            </div>
             <div style={{height:"0.75rem"}}>
             </div>
         </section>

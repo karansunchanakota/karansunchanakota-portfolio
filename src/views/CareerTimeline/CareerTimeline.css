@@ -24,12 +24,16 @@
 .career__timeline__container {
   min-height: calc(100vh - 2rem);
   background-color: #ffffff;
-  margin: 1rem 5rem;
+  margin: 1rem 4rem;
   border-radius: 0.75rem;
 }
 
 .timeline li:before {
   flex: 0;
+}
+
+.timeline li.work__history:before {
+  padding: 0.5rem;
 }
 
 .timeline__list {

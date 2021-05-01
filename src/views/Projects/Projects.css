@@ -5,12 +5,21 @@
 
 .projects__cards {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.projects__container {
+    min-height: calc(100vh - 2rem);
+    background-color: #ffffff;
+    margin: 1rem 4rem;
+    border-radius: 0.75rem;
 }
 
 .projects__card {
-    margin: 1rem;
-    width: 23rem;
+    width: 22rem;
     max-width: 23rem;
 }
 
